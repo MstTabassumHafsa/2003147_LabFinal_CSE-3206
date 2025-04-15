@@ -13,6 +13,30 @@ public:
     virtual ~Shape() = default;
 };
 
+class Rectangle : public Shape {
+    double width, height;
+public:
+    Rectangle(double w = 1.0, double h = 2.0) : width(w), height(h) {}
+    void draw() override {
+        cout << "Drawing Rectangle\n";
+    }
+    double getArea() override {
+        return width * height;
+    }
+};
+
+class Square : public Shape {
+    double side;
+public:
+    Square(double s = 1.0) : side(s) {}
+    void draw() override {
+        cout << "Drawing Square\n";
+    }
+    double getArea() override {
+        return side * side;
+    }
+};
+
 class Circle : public Shape {
     double radius;
 public:
@@ -26,6 +50,29 @@ public:
 };
 
 
+class Rectangle : public Shape {
+    double width, height;
+public:
+    Rectangle(double w = 1.0, double h = 2.0) : width(w), height(h) {}
+    void draw() override {
+        cout << "Drawing Rectangle\n";
+    }
+    double getArea() override {
+        return width * height;
+    }
+};
+
+class Square : public Shape {
+    double side;
+public:
+    Square(double s = 1.0) : side(s) {}
+    void draw() override {
+        cout << "Drawing Square\n";
+    }
+    double getArea() override {
+        return side * side;
+    }
+};
 
 class ShapeFactory {
 public:
